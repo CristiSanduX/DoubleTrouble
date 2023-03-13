@@ -78,6 +78,7 @@
                         <outlet property="diceImageView2" destination="sIv-RM-XLn" id="5el-Ce-TSL"/>
                         <outlet property="player1TextField" destination="47b-Ku-EgZ" id="JEY-Gt-uHu"/>
                         <outlet property="player2TextField" destination="93i-aT-ewX" id="Olb-Xv-tGw"/>
+                        <outlet property="rollButton" destination="Odx-wz-XRq" id="iOq-Ud-tiG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

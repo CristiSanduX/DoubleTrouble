@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var player1TextField: UITextField!
     @IBOutlet weak var player2TextField: UITextField!
     
+    @IBOutlet weak var rollButton: UIButton!
+    
     let diceArray = ["DiceOne", "DiceTwo", "DiceThree", "DiceFour", "DiceFive", "DiceSix"]
     var dice = [UIImage]()
     
@@ -30,9 +32,13 @@ class ViewController: UIViewController {
             dice.append(UIImage(named: image)!)
         }
         
+        rollButton.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
+        
     }
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
+        
+        
         number += 1
         
         // Setam flag-ul pentru a astepta sfarsitul animatiei
@@ -97,4 +103,16 @@ class ViewController: UIViewController {
             }
         }
     }
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        // Adăugați efectul de scalare
+        UIView.animate(withDuration: 0.2, animations: {
+            self.rollButton.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.2) {
+                self.rollButton.transform = CGAffineTransform.identity
+            }
+        })
+    }
+
+
 }
