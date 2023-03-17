@@ -13,6 +13,10 @@
 		1C3DE0C329BDD51C0071590A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DE0C129BDD51C0071590A /* Main.storyboard */; };
 		1C3DE0C529BDD51D0071590A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DE0C429BDD51D0071590A /* Assets.xcassets */; };
 		1C3DE0C829BDD51D0071590A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DE0C629BDD51D0071590A /* LaunchScreen.storyboard */; };
+		1CF2608129C50DFC008AAD15 /* dice_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CF2608029C50DFB008AAD15 /* dice_sound.wav */; };
+		1CF2608529C51114008AAD15 /* win1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CF2608229C51114008AAD15 /* win1.wav */; };
+		1CF2608629C51114008AAD15 /* tie.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CF2608329C51114008AAD15 /* tie.wav */; };
+		1CF2608729C51114008AAD15 /* win2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CF2608429C51114008AAD15 /* win2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1C3DE0C429BDD51D0071590A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C3DE0C729BDD51D0071590A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C3DE0C929BDD51D0071590A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CF2608029C50DFB008AAD15 /* dice_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dice_sound.wav; sourceTree = "<group>"; };
+		1CF2608229C51114008AAD15 /* win1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win1.wav; path = ../../../../../../Downloads/win1.wav; sourceTree = "<group>"; };
+		1CF2608329C51114008AAD15 /* tie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = tie.wav; path = ../../../../../../Downloads/tie.wav; sourceTree = "<group>"; };
+		1CF2608429C51114008AAD15 /* win2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win2.wav; path = ../../../../../../Downloads/win2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		1C3DE0BA29BDD51C0071590A /* DoubleTrouble */ = {
 			isa = PBXGroup;
 			children = (
+				1CF2607F29C50DFB008AAD15 /* Sounds */,
 				1C3DE0BB29BDD51C0071590A /* AppDelegate.swift */,
 				1C3DE0BD29BDD51C0071590A /* SceneDelegate.swift */,
 				1C3DE0BF29BDD51C0071590A /* ViewController.swift */,
@@ -65,6 +74,17 @@
 				1C3DE0C929BDD51D0071590A /* Info.plist */,
 			);
 			path = DoubleTrouble;
+			sourceTree = "<group>";
+		};
+		1CF2607F29C50DFB008AAD15 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1CF2608329C51114008AAD15 /* tie.wav */,
+				1CF2608229C51114008AAD15 /* win1.wav */,
+				1CF2608429C51114008AAD15 /* win2.wav */,
+				1CF2608029C50DFB008AAD15 /* dice_sound.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +145,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF2608729C51114008AAD15 /* win2.wav in Resources */,
+				1CF2608529C51114008AAD15 /* win1.wav in Resources */,
 				1C3DE0C829BDD51D0071590A /* LaunchScreen.storyboard in Resources */,
 				1C3DE0C529BDD51D0071590A /* Assets.xcassets in Resources */,
+				1CF2608629C51114008AAD15 /* tie.wav in Resources */,
 				1C3DE0C329BDD51C0071590A /* Main.storyboard in Resources */,
+				1CF2608129C50DFC008AAD15 /* dice_sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

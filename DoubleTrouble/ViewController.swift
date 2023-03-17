@@ -5,8 +5,11 @@
 //  Created by Cristi Sandu on 12.03.2023.
 //
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var audioPlayer: AVAudioPlayer?
     
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
@@ -37,8 +40,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        
-        
+            
         number += 1
         
         // Setam flag-ul pentru a astepta sfarsitul animatiei
@@ -60,13 +62,50 @@ class ViewController: UIViewController {
         diceImageView1.image = UIImage(named: diceArray[a])
         diceImageView2.image = UIImage(named: diceArray[b])
         
+        if let soundURL = Bundle.main.url(forResource: "dice_sound", withExtension: "wav") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                audioPlayer?.play()
+                print("play")
+            } catch {
+                print("okok")
+            }
+        }
+        else {
+            print("whatthe..")
+        }
+        
         if (number == 6) {
             if (score1 > score2) {
                 message = "Player1 a castigat!"
+                if let soundURL = Bundle.main.url(forResource: "win1", withExtension: "wav") {
+                    do {
+                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                        audioPlayer?.play()
+                    } catch {
+                        print("Nu s-a putut reda sunetul: \(error.localizedDescription)")
+                    }
+                }
             } else if (score2 > score1) {
                 message = "Player2 a castigat!"
+                if let soundURL = Bundle.main.url(forResource: "win2", withExtension: "wav") {
+                    do {
+                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                        audioPlayer?.play()
+                    } catch {
+                        print("Nu s-a putut reda sunetul: \(error.localizedDescription)")
+                    }
+                }
             } else {
                 message = "Egalitate!"
+                if let soundURL = Bundle.main.url(forResource: "tie", withExtension: "wav") {
+                    do {
+                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                        audioPlayer?.play()
+                    } catch {
+                        print("Nu s-a putut reda sunetul: \(error.localizedDescription)")
+                    }
+                }
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + diceImageView1.animationDuration) {
@@ -85,6 +124,7 @@ class ViewController: UIViewController {
             }
         }
     }
+
     
     func updateTextField() {
         player1TextField.text = "\(score1)"
